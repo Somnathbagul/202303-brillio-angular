@@ -3,8 +3,6 @@ function plus(...numbers){
     var result=0;
     for(var number of numbers){
         result+=number;
-
-
     }
 
     return result;

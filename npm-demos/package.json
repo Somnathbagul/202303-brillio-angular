@@ -1,0 +1,23 @@
+{
+  "name": "npm-demos",
+  "version": "1.0.0",
+  "description": "This is a dummy npm",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "magic":"echo we shall perform magic some",
+    "start":"echo we will start your application",
+    "build":"echo we will compile the application"
+  },
+  "keywords": [
+    "test",
+    "dummy"
+  ],
+  "author": "Vivek Dutta Mishra",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^5.2.3",
+    "jquery": "^3.6.4"
+  }
+ 
+}

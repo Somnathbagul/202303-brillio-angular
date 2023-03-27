@@ -1,12 +1,20 @@
 import { Component } from "@angular/core";
 
 
-@Component({
-    selector: 'books-app',
-    template:"<h1>Book's Web</h1>"
 
+@Component({
+    selector:'books-app',
+    template:`
+        <div>
+            <app-header 
+                title='World Wide Books'
+                slogan='Official Homepage of all books of the world'
+            />
+            <books-home-screen/>
+            <app-footer/>
+        </div>
+    `
 })
-export class AppComponent{
+export class AppComponent {
 
 }
-

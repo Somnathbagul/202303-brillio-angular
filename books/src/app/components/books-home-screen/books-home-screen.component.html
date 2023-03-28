@@ -1,0 +1,29 @@
+<div>
+
+    <h2>About - {{book.title |uppercase }}</h2>
+
+    <div class="row">
+        <div class="col col-md4">
+            <img [src]='book.cover' />
+        </div>
+        <div class="col col-md-8">
+            <ul>
+                <li><strong>Author</strong> {{book.author| toupper}}</li>
+                <li><strong>Price</strong> {{book.price |currency:'INR'}}</li>
+                <li><strong>Rating</strong> {{book.rating}}/5</li>
+                <li><strong>Votes</strong> {{book.votes}}</li>
+                <li><strong>Released On</strong> {{book.releaseDate|date:'longDate'}}</li>
+                <li><strong>Released On</strong> 
+                    {{book.releaseDate|date:'EEEE, MMMM dd, yyyy'}}
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <h3>Description</h3>
+    <p>
+        {{book.description}}
+    </p>
+
+
+</div>

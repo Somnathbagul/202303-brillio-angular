@@ -127,4 +127,19 @@ export class BookListComponent {
       }
     ]
 
+    showImages=true;
+
+    handleImageShow(){
+      this.showImages=!this.showImages; //toggle
+      console.log('this.showImages',this.showImages);
+      
+    }
+
+    decreaseSize(){
+      console.log('size decreased');
+    }
+    increaseSize(){
+      console.log('size increased');
+    }
+
 }

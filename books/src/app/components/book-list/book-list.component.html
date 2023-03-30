@@ -3,12 +3,41 @@
 
     <p>These are the {{books.length}} books we thing you would love</p>
 
-    <ul>
-        <li *ngFor="let book of books">
-            {{book.title}} by {{book.author}}
-        </li>
-    </ul>
+    <input type="checkbox" (click)="handleImageShow();" [checked]="showImages" /> Show Images
 
-   
+    <table class="table table-striped  dable-responsive table-hover">
+        <thead>
+            <tr>
+                <th *ngIf="showImages">
+                    {{"Cover"|uppercase}}
+                    <div>   
+                        <i class="fa-solid fa-circle-down" (click)="decreaseSize()"></i>
+                        120
+                        <i class="fa-solid fa-circle-up" (click)="increaseSize()"></i>
+                    </div>
+                </th>
+                <th>TITLE</th>
+                <th>AUTHOR</th>
+                <th>RATING</th>
+                <th>ACTIONS</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let book of books">
+                <td *ngIf="showImages">
+                    <img [hidden]="!showImages" src={{book.cover}} />
+                </td>
+                <td>{{book.title}}</td>
+                <td>{{book.author}}</td>
+                <td>{{book.rating}}</td>
+                <td>
+                    <button class="btn btn-sm btn-primary">Details</button>
+                    <button class="btn btn-sm btn-danger">Delete</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+
 
 </div>

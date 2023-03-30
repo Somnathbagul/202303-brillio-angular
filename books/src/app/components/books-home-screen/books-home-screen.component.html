@@ -11,6 +11,9 @@
                 <li><strong>Author</strong> {{book.author| toupper}}</li>
                 <li><strong>Price</strong> {{book.price |currency:'INR'}}</li>
                 <li><strong>Rating</strong> {{book.rating}}/5</li>
+                <li>
+                    <strong>Suggestion</strong>: {{book.rating|ratingAdvise:5|uppercase}}
+                </li>
                 <li><strong>Votes</strong> {{book.votes}}</li>
                 <li><strong>Released On</strong> {{book.releaseDate|date:'longDate'}}</li>
                 <li><strong>Released On</strong> 

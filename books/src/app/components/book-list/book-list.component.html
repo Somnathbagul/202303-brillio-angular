@@ -1,1 +1,14 @@
-<p>book-list works!</p>
+<div>
+    <h2>Our Recommended Books</h2>
+
+    <p>These are the {{books.length}} books we thing you would love</p>
+
+    <ul>
+        <li *ngFor="let book of books">
+            {{book.title}} by {{book.author}}
+        </li>
+    </ul>
+
+   
+
+</div>

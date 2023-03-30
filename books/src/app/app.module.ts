@@ -7,6 +7,7 @@ import { BooksHomeScreenComponent } from "./components/books-home-screen/books-h
 import { BookListComponent } from './components/book-list/book-list.component';
 import { BookAddComponent } from './components/book-add/book-add.component';
 import { UpperCasePipe } from './pipes/upper-case.pipe';
+import { RatingAdvisePipe } from './pipes/rating-advise.pipe';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { UpperCasePipe } from './pipes/upper-case.pipe';
         AppFooterComponent,
         BookListComponent,
         BookAddComponent,
-        UpperCasePipe
+        UpperCasePipe,
+        RatingAdvisePipe
     ],
     bootstrap:[
         AppComponent,

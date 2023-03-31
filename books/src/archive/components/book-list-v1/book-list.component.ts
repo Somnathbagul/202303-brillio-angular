@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { Book } from 'src/app/models/book';
-import { RangeChangeParameter } from '../range/range.component';
 
 @Component({
   selector: 'book-list',
@@ -8,20 +7,6 @@ import { RangeChangeParameter } from '../range/range.component';
   styleUrls: ['./book-list.component.css']
 })
 export class BookListComponent {
-
-    public imageHeight=150
-
-    // resize(value: number){
-    //   this.imageHeight=value;
-    // }
-
-    // handleImageHeightChange(param: RangeChangeParameter){
-    //     console.log('param in parent event handler',param);
-      
-    // }
-
-
-
 
     public books:Book[]=[
       {
@@ -152,6 +137,23 @@ export class BookListComponent {
       
     }
 
-  
-    
+    public imageHeight=150
+    public min=100;
+    public max=220;
+    public delta=5;
+
+    //public imageStyle= { height:`${this.imageHeight}px`};
+
+    decreaseSize(){
+      var v= this.imageHeight-this.delta;
+      this.imageHeight=Math.max(this.min, v);
+      //this.imageStyle={ height:`${this.imageHeight}px`};
+
+    }
+    increaseSize(){
+      var v=this.imageHeight+this.delta;
+      this.imageHeight=Math.min(v, this.max);
+      //this.imageStyle={ height:`${this.imageHeight}px`};
+    }
+
 }

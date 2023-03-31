@@ -8,6 +8,7 @@ import { BookListComponent } from './components/book-list/book-list.component';
 import { BookAddComponent } from './components/book-add/book-add.component';
 import { UpperCasePipe } from './pipes/upper-case.pipe';
 import { RatingAdvisePipe } from './pipes/rating-advise.pipe';
+import { RangeComponent } from './components/range/range.component';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { RatingAdvisePipe } from './pipes/rating-advise.pipe';
         BookListComponent,
         BookAddComponent,
         UpperCasePipe,
-        RatingAdvisePipe
+        RatingAdvisePipe,
+        RangeComponent
     ],
     bootstrap:[
         AppComponent,

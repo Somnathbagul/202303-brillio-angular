@@ -4,24 +4,17 @@
     <p>These are the {{books.length}} books we thing you would love</p>
 
     <input type="checkbox" (click)="handleImageShow();" [checked]="showImages" /> Show Images
-   <p> image height : {{imageHeight}}</p>
+
     <table class="table table-striped  dable-responsive table-hover">
         <thead>
             <tr>
                 <th *ngIf="showImages">
                     {{"Cover"|uppercase}}
-
-                    <app-range 
-                                [(value)]="imageHeight" 
-                                
-                                [min]="80"
-                                [max]="220"
-                                [delta]="5"
-                                
-                    
-                    />
-
-
+                    <div>   
+                        <i class="fa-solid fa-circle-down" (click)="decreaseSize()"></i>
+                        {{imageHeight}}
+                        <i class="fa-solid fa-circle-up" (click)="increaseSize()"></i>
+                    </div>
                 </th>
                 <th>TITLE</th>
                 <th>AUTHOR</th>

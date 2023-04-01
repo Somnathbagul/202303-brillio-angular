@@ -9,11 +9,16 @@ import { BookAddComponent } from './components/book-add/book-add.component';
 import { UpperCasePipe } from './pipes/upper-case.pipe';
 import { RatingAdvisePipe } from './pipes/rating-advise.pipe';
 import { RangeComponent } from './components/range/range.component';
+import { FormsModule } from "@angular/forms";
+import { StarRatingComponent } from './components/star-rating/star-rating.component';
+import { ShowIfDirective } from './directives/show-if.directive';
+import { SimpleBookService } from "./services/simple-book-service";
 
 
 @NgModule({
     imports:[
-        BrowserModule
+        BrowserModule,
+        FormsModule
     ],
     declarations:[
         BooksHomeScreenComponent,
@@ -24,7 +29,12 @@ import { RangeComponent } from './components/range/range.component';
         BookAddComponent,
         UpperCasePipe,
         RatingAdvisePipe,
-        RangeComponent
+        RangeComponent,
+        StarRatingComponent,
+        ShowIfDirective
+    ],
+    providers:[
+        SimpleBookService
     ],
     bootstrap:[
         AppComponent,

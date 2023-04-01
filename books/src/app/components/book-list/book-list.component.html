@@ -1,55 +1,70 @@
 <div>
-    <h2>Our Recommended Books</h2>
+    <div *ngIf="books.length">
+        <h2>Our Recommended Books</h2>
 
-    <p>These are the {{books.length}} books we thing you would love</p>
+        <p>These are the {{books.length}} books we thing you would love</p>
 
-    <input type="checkbox" (click)="handleImageShow();" [checked]="showImages" /> Show Images
-   <p> image height : {{imageHeight}}</p>
-    <table class="table table-striped  dable-responsive table-hover">
-        <thead>
-            <tr>
-                <th *ngIf="showImages">
-                    {{"Cover"|uppercase}}
-
-                    <app-range 
-                                [(value)]="imageHeight" 
-                                
-                                [min]="80"
-                                [max]="220"
-                                [delta]="5"
-                                
-                    
-                    />
+        <input type="checkbox"  
+            [(ngModel)]='showImages'
+        /> Show Images
 
 
-                </th>
-                <th>TITLE</th>
-                <th>AUTHOR</th>
-                <th>RATING</th>
-                <th>ACTIONS</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr *ngFor="let book of books">
-                <td *ngIf="showImages">
-                    <img    [hidden]="!showImages" 
-                            src={{book.cover}} 
+    
+        <table class="table table-striped  dable-responsive table-hover">
+            <thead>
+                <tr>
+                    <th *ngIf="true">
+                        {{"Cover"|uppercase}}
 
-                            [style.height.px]='imageHeight'
+                        <app-range 
+                                    [(value)]="imageHeight" 
+                                    
+                                    [min]="80"
+                                    [max]="220"
+                                    [delta]="5"
+                                    
+                        
+                        />
 
-                            />
-               </td>
-                <td>{{book.title}}</td>
-                <td>{{book.author}}</td>
-                <td>{{book.rating}}</td>
-                <td>
-                    <button class="btn btn-sm btn-primary">Details</button>
-                    <button class="btn btn-sm btn-danger">Delete</button>
+
+                    </th>
+                    <th>TITLE</th>
+                    <th>AUTHOR</th>
+                    <th>RATING</th>
+                    <th>ACTIONS</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let book of books">
+                    <td *ngIf="true">
+                        <img     
+                                [showIf]="showImages"
+
+                                src={{book.cover}} 
+
+                                [style.height.px]='imageHeight'
+
+                                />
                 </td>
-            </tr>
-        </tbody>
-    </table>
+                    <td>{{book.title}}</td>
+                    <td>{{book.author}}</td>
+                    <td>
+                        <star-rating [rating]="book.rating" />
+                    </td>
+                    <td>
+                        <button class="btn btn-sm btn-primary">Details</button>
+                        <button class="btn btn-sm btn-danger">Delete</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
 
-
+    </div>
+    
+    <div *ngIf="!books.length">
+        <h2>No Books Yet!!!</h2>
+        <p>Oh!!! We are still building our database!</p>
+        <p>Why don't you add a few books here</p>
+    </div>
 
 </div>

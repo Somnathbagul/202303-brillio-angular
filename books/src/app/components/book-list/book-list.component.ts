@@ -10,14 +10,27 @@ import { RangeChangeParameter } from '../range/range.component';
 })
 export class BookListComponent implements OnInit{
 
-  constructor(private bookService: SimpleBookService){    
+  //Ok! I can create a new service object
+  //that will be different from what other components may be using
+  //private bookService=new SimpleBookService();
+  
+  constructor(private bookService:SimpleBookService){    
+    //module please provide me the bookService object that you have
+    //I will not create a new one!
+    
   }
 
 
   ngOnInit(): void {
-    this.books  = this.bookService.getAllBooks();
+      
+      this.refresh();
   }
-
+  
+  refresh(){
+    console.log('refreshing...');
+    this.books  = this.bookService.getAllBooks();
+    console.log('got total ', this.books.length,'books');
+  }
   
 
 

@@ -1,11 +1,18 @@
 <div>
     <div *ngIf="books.length">
         <h2>Our Recommended Books</h2>
+        <button (click)="refresh()">refresh</button>
 
         <p>These are the {{books.length}} books we thing you would love</p>
 
         <input type="checkbox"  
+
             [(ngModel)]='showImages'
+
+            
+
+           
+
         /> Show Images
 
 
@@ -38,6 +45,7 @@
                 <tr *ngFor="let book of books">
                     <td *ngIf="true">
                         <img     
+                                
                                 [showIf]="showImages"
 
                                 src={{book.cover}} 

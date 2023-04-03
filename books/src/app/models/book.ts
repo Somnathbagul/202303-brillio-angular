@@ -5,7 +5,7 @@ export interface Id{
 export interface Book{
 
     _id?: Id,
-
+    id:string,
     isbn:string,
     title:string,
     author:string,

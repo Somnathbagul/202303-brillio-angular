@@ -15,6 +15,7 @@ export class BooksHomeScreenComponent{
     "_id": {
       "$oid": "5f4fc2136980a8fb2b76e857"
     },
+    "id":"the-accursed-god",
     "isbn": "9781393495574",
     "title": "The Accursed God",
     "author": "Vivek Dutta Mishra",

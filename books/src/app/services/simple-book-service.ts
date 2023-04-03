@@ -8,6 +8,7 @@ export class SimpleBookService{
           "_id": {
             "$oid": "5f4fc2136980a8fb2b76e857"
           },
+          "id":"the-accursed-god",
           "isbn": "9781393495574",
           "title": "The Accursed God",
           "author": "Vivek Dutta Mishra",
@@ -32,6 +33,7 @@ export class SimpleBookService{
           "_id": {
             "$oid": "5f4fb4e66980a8fb2b76e84c"
           },
+          "id":"harry-potter-1",
           "isbn": "1408855658",
           "title": "Harry Potter and the Philosopher's Stone ",
           "author": "JK Rowling",
@@ -55,6 +57,7 @@ export class SimpleBookService{
           "_id": {
             "$oid": "5f4fbe4c6980a8fb2b76e854"
           },
+          "id":"five-litte-pigs",
           "isbn": "0007527519",
           "title": "Five Little Pigs",
           "author": "Agatha Christie",
@@ -79,6 +82,7 @@ export class SimpleBookService{
           "_id": {
             "$oid": "5f4fb89d6980a8fb2b76e850"
           },
+          "id":"harry-potter-6",
           "isbn": "9781408855706",
           "title": "Harry Potter and the Half Blood Prince",
           "author": "JK Rowling",
@@ -102,6 +106,7 @@ export class SimpleBookService{
             "$oid": "5f4fb7b36980a8fb2b76e84f"
           },
           "isbn": "9781408855690",
+          "id":"harry-potter-5",
           "title": "Harry Potter and the Order of the Phoenix",
           "author": "JK Rowling",
           "pages": "816",

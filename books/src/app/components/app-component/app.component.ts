@@ -9,4 +9,5 @@ import { Component } from "@angular/core";
 export class AppComponent {
     public title="World Wide Books";
     public subTitle='Where books live...'
+    public screen="book-add";
 }

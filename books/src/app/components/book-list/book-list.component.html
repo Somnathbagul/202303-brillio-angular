@@ -1,24 +1,18 @@
 <div>
     <div *ngIf="books.length">
-        <h2>Our Recommended Books</h2>
-        <button (click)="refresh()">refresh</button>
+        <h2 foreground="red" >Our Recommended Books</h2>
+       
+        <p class="bordered">
+            <input type="checkbox"  
 
-        <p>These are the {{books.length}} books we thing you would love</p>
+                [(ngModel)]='showImages'
 
-        <input type="checkbox"  
+            /> Show Images
 
-            [(ngModel)]='showImages'
-
-            
-
-           
-
-        /> Show Images
-
-
+        </p>
     
         <table class="table table-striped  dable-responsive table-hover">
-            <thead>
+            <thead >
                 <tr>
                     <th *ngIf="true">
                         {{"Cover"|uppercase}}

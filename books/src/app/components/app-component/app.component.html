@@ -4,9 +4,11 @@
 
         [slogan]='subTitle'
     />
-    <div class="app-container">
-        <book-add></book-add>
-        <book-list></book-list>
+    <div class="app-container" [ngSwitch]="screen">
+
+        <book-add *ngSwitchCase="'book-add'"></book-add>
+
+        <book-list *ngSwitchCase="'book-list'"></book-list>
     </div>
     <app-footer/>
 </div>

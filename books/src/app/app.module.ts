@@ -13,6 +13,8 @@ import { FormsModule } from "@angular/forms";
 import { StarRatingComponent } from './components/star-rating/star-rating.component';
 import { ShowIfDirective } from './directives/show-if.directive';
 import { SimpleBookService } from "./services/simple-book-service";
+import { BorderDirective } from './directives/border.directive';
+import { HighlightDirective } from './directives/highlight.directive';
 
 
 @NgModule({
@@ -31,7 +33,9 @@ import { SimpleBookService } from "./services/simple-book-service";
         RatingAdvisePipe,
         RangeComponent,
         StarRatingComponent,
-        ShowIfDirective
+        ShowIfDirective,
+        BorderDirective,
+        HighlightDirective
     ],
     providers:[
         SimpleBookService

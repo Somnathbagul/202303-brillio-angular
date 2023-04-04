@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { Book } from 'src/app/models/book';
 import { SimpleBookService } from 'src/app/services/simple-book-service';
 import { RangeChangeParameter } from '../range/range.component';
@@ -9,6 +9,8 @@ import { RangeChangeParameter } from '../range/range.component';
   styleUrls: ['./book-list.component.css']
 })
 export class BookListComponent implements OnInit{
+
+  @Output() public bookSelect=new EventEmitter<string>();
 
   //Ok! I can create a new service object
   //that will be different from what other components may be using

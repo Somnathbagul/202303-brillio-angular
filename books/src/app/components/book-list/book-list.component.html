@@ -54,7 +54,7 @@
                         <star-rating [rating]="book.rating" />
                     </td>
                     <td>
-                        <button class="btn btn-sm btn-primary">Details</button>
+                        <button (click)="bookSelect.emit(book.id)" class="btn btn-sm btn-primary">Details</button>
                         <button class="btn btn-sm btn-danger">Delete</button>
                     </td>
                 </tr>

@@ -11,9 +11,14 @@
 
         <book-add *ngSwitchCase="'book-add'"></book-add>
 
-        <book-list *ngSwitchCase="'book-list'"></book-list>
+        <book-list *ngSwitchCase="'book-list'"
+                    (bookSelect)="handleBookSelect($event)"
+                ></book-list>
 
-        <book-details-screen *ngSwitchCase="'book-details'"></book-details-screen>
+        <book-details-screen 
+                *ngSwitchCase="'book-details'"
+                [selectedBookId]="selectedBookId"
+                ></book-details-screen>
     </div>
     <app-footer/>
 </div>

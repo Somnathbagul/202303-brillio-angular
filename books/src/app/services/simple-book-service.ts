@@ -135,4 +135,8 @@ export class SimpleBookService{
         this.books.push(book);
     }
 
+    getBookById(id:string){
+      return this.books.find(book => book.id === id);
+    }
+
 }

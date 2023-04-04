@@ -1,4 +1,8 @@
-<div>
+<div *ngIf="!book">
+    Please wait...
+</div>
+
+<div *ngIf="book">
 
     <h2>About - {{book.title |uppercase }}</h2>
 

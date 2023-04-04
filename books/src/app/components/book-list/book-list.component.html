@@ -36,7 +36,7 @@
                 </tr>
             </thead>
             <tbody>
-                <tr *ngFor="let book of books">
+                <tr *ngFor="let book of books" [routerLink]="['/book/details', book.id]">
                     <td *ngIf="true">
                         <img     
                                 
@@ -54,7 +54,8 @@
                         <star-rating [rating]="book.rating" />
                     </td>
                     <td>
-                        <button class="btn btn-sm btn-primary">Details</button>
+                        <button  class="btn btn-sm btn-primary">Details</button>
+
                         <button class="btn btn-sm btn-danger">Delete</button>
                     </td>
                 </tr>

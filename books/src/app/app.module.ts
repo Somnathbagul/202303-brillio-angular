@@ -15,12 +15,24 @@ import { ShowIfDirective } from './directives/show-if.directive';
 import { SimpleBookService } from "./services/simple-book-service";
 import { BorderDirective } from './directives/border.directive';
 import { HighlightDirective } from './directives/highlight.directive';
+import { UserLoginScreenComponent } from './components/user-login-screen/user-login-screen.component';
+import { UserReisterScreenComponent } from './components/user-reister-screen/user-reister-screen.component';
+import { AuthorListScreenComponent } from './components/author-list-screen/author-list-screen.component';
+import { AuthorDetailsScreenComponent } from './components/author-details-screen/author-details-screen.component';
+import { AuthorAddScreenComponent } from './components/author-add-screen/author-add-screen.component';
+import { HomeScreenComponent } from './components/home-screen/home-screen.component';
+import { UserRegisterScreenComponent } from './components/user-register-screen/user-register-screen.component';
 
+import { RouterModule } from "@angular/router";
+
+import appRoute from "./app-routes";
+import { E404ScreenComponent } from './components/e404-screen/e404-screen.component';
 
 @NgModule({
     imports:[
         BrowserModule,
-        FormsModule
+        FormsModule,
+        RouterModule.forRoot(appRoute)
     ],
     declarations:[
         BookDetailsScreenComponent,
@@ -35,7 +47,15 @@ import { HighlightDirective } from './directives/highlight.directive';
         StarRatingComponent,
         ShowIfDirective,
         BorderDirective,
-        HighlightDirective
+        HighlightDirective,
+        UserLoginScreenComponent,
+        UserReisterScreenComponent,
+        AuthorListScreenComponent,
+        AuthorDetailsScreenComponent,
+        AuthorAddScreenComponent,
+        HomeScreenComponent,
+        UserRegisterScreenComponent,
+        E404ScreenComponent
     ],
     providers:[
         SimpleBookService

@@ -9,3 +9,7 @@ img{
 button{
     margin:5px;
 }
+
+tbody tr{
+    cursor:pointer;
+}

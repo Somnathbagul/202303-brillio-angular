@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container-fluid">
-        <a class="navbar-brand" href="#">{{title}}</a>
+        <a class="navbar-brand" routerLink="/">{{title}}</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -8,20 +8,21 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li  class="nav-item"  data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
-                    <a class="nav-link"  aria-current="page" href="#">
+                    <a class="nav-link"  aria-current="page" [routerLink]="'/book/list'">
                         <i class="fa-solid fa-book"></i>Books</a>
                 </li>
                 <li  class="nav-item"  data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
-                    <a class="nav-link"   href="#">
+
+                    <a class="nav-link"   routerLink="book/add">
                         <i class="fa-solid fa-book-medical"></i>
                         Add Book</a>
                 </li>
                 <li class="nav-item"  data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
-                    <a class="nav-link" aria-current="page" href="#">
+                    <a class="nav-link" aria-current="page" routerLink="/author/list">
                         <i class="fa-solid fa-user-group"></i> Authors</a>
                 </li>
                 <li class="nav-item"  data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
-                    <a class="nav-link" href="#"><i class="fa-solid fa-user-plus"></i>Add Author</a>
+                    <a class="nav-link" routerLink="/author/add"><i class="fa-solid fa-user-plus"></i>Add Author</a>
                 </li>
                 
                
@@ -41,8 +42,8 @@
                         Members
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#"><i class="fa-solid fa-arrow-right-to-bracket"></i>Login</a></li>
-                        <li><a class="dropdown-item" href="#"><i class="fa-solid fa-user-plus"></i>Register</a></li>
+                        <li><a class="dropdown-item" routerLink="/user/login"><i class="fa-solid fa-arrow-right-to-bracket"></i>Login</a></li>
+                        <li><a class="dropdown-item" routerLink="/user/register"><i class="fa-solid fa-user-plus"></i>Register</a></li>
                         <li>
                             <hr class="dropdown-divider">
                         </li>

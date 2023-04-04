@@ -3,12 +3,17 @@
         title={{title}}
 
         [slogan]='subTitle'
+
+        [(selection)]="screen"
+        
     />
     <div class="app-container" [ngSwitch]="screen">
 
         <book-add *ngSwitchCase="'book-add'"></book-add>
 
         <book-list *ngSwitchCase="'book-list'"></book-list>
+
+        <book-details-screen *ngSwitchCase="'book-details'"></book-details-screen>
     </div>
     <app-footer/>
 </div>

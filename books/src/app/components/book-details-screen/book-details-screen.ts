@@ -4,12 +4,12 @@ import { Book } from "src/app/models/book";
 
 @Component({
 
-    selector:'books-home-screen',    
-    templateUrl: './books-home-screen.component.html',
-    styleUrls:['./books-home-screen.component.css'],
+    selector:'book-details-screen',    
+    templateUrl: './book-details-screen.html',
+    styleUrls:['./book-details-screen.css'],
             
 })
-export class BooksHomeScreenComponent{
+export class BookDetailsScreenComponent{
 
    public book:Book={
     "_id": {

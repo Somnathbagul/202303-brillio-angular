@@ -3,7 +3,7 @@ import { BrowserModule } from "@angular/platform-browser";
 import { AppComponent } from "./components/app-component/app.component";
 import { AppFooterComponent } from "./components/app-footer/app-footer.component";
 import { AppHeaderComponent } from "./components/app-header/app-header.component";
-import { BooksHomeScreenComponent } from "./components/books-home-screen/books-home-screen.component";
+import { BookDetailsScreenComponent } from "./components/book-details-screen/book-details-screen";
 import { BookListComponent } from './components/book-list/book-list.component';
 import { BookAddComponent } from './components/book-add/book-add.component';
 import { UpperCasePipe } from './pipes/upper-case.pipe';
@@ -23,7 +23,7 @@ import { HighlightDirective } from './directives/highlight.directive';
         FormsModule
     ],
     declarations:[
-        BooksHomeScreenComponent,
+        BookDetailsScreenComponent,
         AppComponent,
         AppHeaderComponent,
         AppFooterComponent,

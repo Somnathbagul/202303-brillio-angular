@@ -7,21 +7,21 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item"  data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
-                    <a class="nav-link active" aria-current="page" href="#">
+                <li (click)="onLinkClick('book-list')" class="nav-item"  data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
+                    <a class="nav-link" [class.active]="selection==='book-list'" aria-current="page" href="#">
                         <i class="fa-solid fa-book"></i>Books</a>
                 </li>
-                <li class="nav-item"  data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
-                    <a class="nav-link active" href="#">
+                <li (click)="onLinkClick('book-add')" class="nav-item"  data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
+                    <a class="nav-link"  [class.active]="selection==='book-add'" href="#">
                         <i class="fa-solid fa-book-medical"></i>
                         Add Book</a>
                 </li>
                 <li class="nav-item"  data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
-                    <a class="nav-link active" aria-current="page" href="#">
+                    <a class="nav-link" aria-current="page" href="#">
                         <i class="fa-solid fa-user-group"></i> Authors</a>
                 </li>
                 <li class="nav-item"  data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
-                    <a class="nav-link active" href="#"><i class="fa-solid fa-user-plus"></i>Add Author</a>
+                    <a class="nav-link" href="#"><i class="fa-solid fa-user-plus"></i>Add Author</a>
                 </li>
                 
                

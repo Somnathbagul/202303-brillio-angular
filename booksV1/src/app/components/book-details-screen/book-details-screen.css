@@ -1,0 +1,12 @@
+h2{
+    /* text-shadow: -2px -2px 2px  gray; */
+    
+}
+
+img{
+    height:300px;
+    border:10px solid black;
+    padding:5px;
+    box-shadow: 5px 5px 5px gray;
+    margin:10px;
+}

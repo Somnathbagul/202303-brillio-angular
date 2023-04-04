@@ -10,31 +10,14 @@ import { RangeChangeParameter } from '../range/range.component';
 })
 export class BookListComponent implements OnInit{
 
-  @Output() public bookSelect=new EventEmitter<string>();
-
-  //Ok! I can create a new service object
-  //that will be different from what other components may be using
-  //private bookService=new SimpleBookService();
   
   constructor(private bookService:SimpleBookService){    
-    //module please provide me the bookService object that you have
-    //I will not create a new one!
     
   }
 
-
   ngOnInit(): void {
-      
-      this.refresh();
+    this.books=this.bookService.getAllBooks()
   }
-  
-  refresh(){
-    console.log('refreshing...');
-    this.books  = this.bookService.getAllBooks();
-    console.log('got total ', this.books.length,'books');
-  }
-  
-
 
   showImages=true;    
 
@@ -43,23 +26,6 @@ export class BookListComponent implements OnInit{
   public books:Book[]=[];
 
 
-
-
-
-  // handleImageShow(){
-  //   this.showImages=!this.showImages; //toggle
-  //   console.log('this.showImages',this.showImages);
-  // }
-
-
-    // resize(value: number){
-    //   this.imageHeight=value;
-    // }
-
-    // handleImageHeightChange(param: RangeChangeParameter){
-    //     console.log('param in parent event handler',param);
-      
-    // }
 
 
     

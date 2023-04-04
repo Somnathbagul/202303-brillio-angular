@@ -16,7 +16,7 @@ export class BookDetailsScreenComponent{
 
    public book:Book|null|undefined=null
 
-   public selectedBookId:string='the-accursed-god';
+   @Input() public selectedBookId:string='';
 
   ngOnInit(){
     this.book=this.bookService.getBookById(this.selectedBookId);

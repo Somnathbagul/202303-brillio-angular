@@ -4,21 +4,10 @@
 
         [slogan]='subTitle'
 
-        [(selection)]="screen"
-        
     />
-    <div class="app-container" [ngSwitch]="screen">
+    <div class="app-container">
 
-        <book-add *ngSwitchCase="'book-add'"></book-add>
-
-        <book-list *ngSwitchCase="'book-list'"
-                    (bookSelect)="handleBookSelect($event)"
-                ></book-list>
-
-        <book-details-screen 
-                *ngSwitchCase="'book-details'"
-                [selectedBookId]="selectedBookId"
-                ></book-details-screen>
+      <book-details-screen/>
     </div>
     <app-footer/>
 </div>
